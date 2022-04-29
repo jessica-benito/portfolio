@@ -1,0 +1,148 @@
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 12px 0;
+}
+
+p {
+  margin: 0;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+.spacer {
+  flex: 1;
+}
+.logo {
+  color: white;
+}
+.intro {
+  display: flex;
+  align-items: center;
+
+  div{
+    margin-left: 30px;
+  }
+  .portrait{
+    max-width: 15em;
+    border-radius: 50%;
+    &:hover {
+      transform: scale(125%);
+      transition:transform 0.1s linear;
+    }
+  }
+
+  p{
+    font-size: large;
+  }
+  #intro-name{
+    font-size: xxx-large;
+  }
+}
+
+/*.toolbar {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  color: white;*/
+/*  font-weight: 600;*/
+/*  margin: 32px auto 32px;*/
+/*  height: 200px;*/
+/*  max-width: 960px;*/
+/*}*/
+
+.logo:hover{
+  opacity: 0.8;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  h1.section-title {
+    text-transform: uppercase;
+  }
+  &>div {
+    background-color: rgba(#000, 0.6);
+    border-radius: 5px;
+    width: 100%;
+    padding: 50px;
+  }
+}
+table{
+  width: 100%;
+  &, th, td {
+    border: none;
+  }
+}
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .card-container > *:not(.circle-link) ,
+  .terminal {
+    width: 100%;
+  }
+
+  .card:not(.highlight-card) {
+    height: 16px;
+    margin: 8px 0;
+  }
+
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+
+}
+
