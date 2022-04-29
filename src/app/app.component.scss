@@ -6,6 +6,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(#000, 0.50);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(#000, 0.76);
+}
 
 h1,
 h2,
@@ -36,18 +55,18 @@ p {
     flex-direction: column;
     justify-content: center;
     padding: 0;
-    width: 120px;
+    width: 130px;
     li {
       margin: 0.5rem 1rem;
       padding: 0.5rem 0;
-      &.active{
-        background-color: #1976d2;
-        transition: 0.3s ease background-color;
-      }
       a {
         color: rgba(#fff, 0.7);
         text-decoration: none;
         text-transform: uppercase;
+        &.active{
+          color: #fff;
+          font-weight: bolder;
+        }
         &:hover {
           color: #fff;
         }
@@ -85,20 +104,6 @@ p {
   }
 }
 
-/*.toolbar {*/
-/*  position: absolute;*/
-/*  top: 0;*/
-/*  left: 0;*/
-/*  right: 0;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  color: white;*/
-/*  font-weight: 600;*/
-/*  margin: 32px auto 32px;*/
-/*  height: 200px;*/
-/*  max-width: 960px;*/
-/*}*/
-
 .logo:hover{
   opacity: 0.8;
 }
@@ -111,7 +116,7 @@ p {
 }
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin: auto auto;
   max-width: 960px;
   flex-direction: column;
   align-items: flex-start;

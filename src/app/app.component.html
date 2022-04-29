@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" (scroll)="onContainerScroll($event)">
   <div class="content" role="main">
     <nav class="navbar">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about-me">About me</a></li>
-        <li><a href="#work-experience">Work Experience</a></li>
-        <li><a href="#other-skills">Other skills and Education</a></li>
-        <li><a href="#contact-info">Contact info</a></li>
+        <li><a [ngClass]="{'active' : currentSelection === 'home'}" href="#home">Home</a></li>
+        <li><a [ngClass]="{'active' : currentSelection === 'about-me'}"href="#about-me">About me</a></li>
+        <li><a [ngClass]="{'active' : currentSelection === 'work-experience'}"href="#work-experience">Work Experience</a></li>
+        <li><a [ngClass]="{'active' : currentSelection === 'other-skills'}"href="#other-skills">Other skills and Education</a></li>
+        <li><a [ngClass]="{'active' : currentSelection === 'contact-info'}"href="#contact-info">Contact Info</a></li>
       </ul>
 
     </nav>
