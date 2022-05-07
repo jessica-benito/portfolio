@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, HostListener} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +6,11 @@ import {Component, OnInit, Input, HostListener} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+
+  ngOnInit():void { }
+
   title = 'portfolio';
   currentSelection = 'home';
-  constructor(
-  ) { }
-  ngOnInit():void { }
 
   @HostListener('scroll') onContainerScroll(e: Event): void {
     let sections = document.querySelectorAll('section');
